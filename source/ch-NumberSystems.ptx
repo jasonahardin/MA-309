@@ -13,6 +13,6 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="/workspaces/MA-309/source/sec-RationalIrrationalNumbers" />
+  <xi:include href="/workspaces/MA-309/source/sec-RationalIrrationalNumbers.ptx" />
 
 </chapter>
