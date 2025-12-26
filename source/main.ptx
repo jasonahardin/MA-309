@@ -11,7 +11,7 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="/workspaces/MA-309/source/ch-NumberSystems.ptx" />
+    <xi:include href="ch-NumberSystems.ptx" />
 
 
     <!-- Include backmatter -->
