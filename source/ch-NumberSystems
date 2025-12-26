@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-NumberSystems" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Number Systems</title>
+
+  <introduction>
+    <p> In this chapter we discuss the algebraic structure of the rational, 
+        real, and complex numbers, as well as look at some various representations 
+        and models for these number systems. While you should be intimately 
+        familiar with each of these number systems, we will look at each from 
+        various points of view to ensure a solid understanding of their properties 
+        and structure. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="/workspaces/MA-309/source/sec-RationalIrrationalNumbers" />
+
+</chapter>

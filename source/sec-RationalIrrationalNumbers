@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-rational_irrational_numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Rational and Irrational Numbers
+  </title>
+
+  <p>
+    We begin be recalling the definitions and symbols for some basic number systems 
+    which will be used continually throughout this course.
+  </p>
+
+  <p>
+    The set of <term>natural</term> (or <term>counting</term>) <term>numbers</term>, denoted by <m>\N</m>, are defined as follows:
+      <md>
+        \N = \{1,2,3,4,\ldots\}.
+      </md>
+    Note that <m>0</m> is not considered a natural number.
+  </p>
+
+  <p>
+    The <term>integers</term>, denoted <m>\Z</m>, consist of all natural numbers,  their negatives, and zero:
+      <md>
+        \Z = \{ \ldots,-4,-3,-2,-1,0,1,2,3,4,\ldots\}.
+      </md>
+  </p>
+
+  <p>
+    Other important numbers systems can be defined in terms of the natural numbers and integers. These include the rational numbers <m>\Q</m>, the real numbers 
+    <m>\R</m>, and the complex numbers <m>\C</m>. We will discuss each of these systems further; in this section, we discuss the rational numbers.
+  </p>
+
+  <definition xml:id="defn-rational_irrational_numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <p>
+    A number <m> r </m> is a <term> rational number </term> if it can be written in the form <m> \dfrac{a}{b} </m>, where <m> a,b\in\Z </m> and <m> b\neq0 </m>. 
+    A number which is not a rational number is an <term> irrational number </term>.
+    </p>
+  </definition>
+
+  <p>
+    Determining whether a given number is rational or irrational can be surprisingly difficult! To show a number is rational, one must rewrite it as a quotient of 
+    integers as in Definition <xref ref="defn-rational_irrational_numbers" />. To show a number is irrational, one must show that is can <emph> not </emph> be  written in 
+    such a form.
+  </p>
+
+  <example xml:id="exam-rational_numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <p>
+    The following numbers are all rational since they can all be written as quotients of two integers as in <xref ref="defn-rational_irrational_numbers" />:
+      <md>
+        \dfrac{5}{6},\ \ \ -9 = \dfrac{-9}{1},\ \ \ 4.9512 = \dfrac{49512}{10000},\ \ \ 
+        \ln(e^{12/5}) = \dfrac{12}{5},\ \ \ 
+      </md>
+      <md>
+        \sqrt{12}\tan\left(\dfrac{\pi}{3}\right) = \sqrt{12}\cdot\sqrt{3}=6=\dfrac{6}{1}
+      </md>
+    </p>
+  </example>
+
+  <p>
+    Using similar reasoning as in the previous example, it is trivial to show that all integers and finite decimals (such as <m> 4.9512 </m> above) are rational numbers.
+  </p>
+
+  <example xml:id="exam-irrational_numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <p>
+      The following numbers are all known to be irrational. No effort is made to prove this  here; however, the irrationality of the three square roots will be proven later 
+      (see <xref ref="thm-square_root_n_irrational" />) while that of the others will simply be accepted as fact for purposes of these notes.
+      <md>
+        \sqrt{2},\ \ \ \sqrt{83},\ \ \ \sqrt{205},\ \ \ e,\ \ \ \pi,\ \ \ \ln(3),\ \ \ \sin(3)
+      </md>
+    </p>
+  </example>
+
+  <subsection xml:id="subsect-structure_Of_Q" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>
+      Algebraic Structure of <m> \Q </m>
+    </title>
+
+    <p>
+      We now take a look at some of the algebraic structure of the rational numbers.
+    </p>
+
+    <theorem xml:id="thm-properties_of_rationals" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <p>
+      <ol>
+        <li>
+          The set <m> \Q </m> is closed under addition, subtraction, and multiplication.
+        </li>
+        <li>
+          The set <m> \Q-\{0\} </m> is closed under division.
+        </li>
+        <li>
+          <p>
+          The set <m> \Q </m> equipped with these operations satisfy the following properties, 
+          where <m> r,s,t\in\Q </m>:
+            <ol>
+              <li>
+                Commutative properties:  <m> r+s = s+r</m> and <m> rs = sr </m>
+              </li>
+              <li>
+                Associative properties:  <m> r+(s+t) = (r+s)+t </m> and <m> r(st) = (rs)t </m>
+              </li>
+              <li> 
+                Distributive properties: <m> r(s+t) = rs+rt </m> and <m> (r+s)t = rt+st </m>
+              </li>
+              <li>
+                Identity properties: <m> r+0 = r =0+r </m> and <m> r\cdot 1 = r = 1\cdot r </m>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+      </p>
+    </theorem>
+
+    <remark>
+      <p>
+      A set being closed under an operation means that whenever we perform the operation on any two 
+      elements of the set, we will always obtain another element of that set. For example, <m> \Z </m> 
+      is closed under addition since the sum of any two integers is known to be an integer; <m> \Z </m> 
+      is not closed under division since, for example, the quotient <m> 3 \div 5 = \dfrac{3}{5} </m> 
+      is not an integer.
+      </p>
+    </remark>
+
+    <proof>
+      <ol>
+        <li>
+          Let <m> r,s\in\Q </m>. By the definition of a rational number, there exist <m> a,b,c,d\in\Z </m>, with <m> r=\dfrac{a}{b} </m>, <m> s=\dfrac{c}{d} </m>, and 
+          <m> b,d\neq0 </m>. Then
+          <md>
+            r \pm s = \dfrac{a}{b} \pm \dfrac{c}{d} = \dfrac{ad\pm bc}{bd}
+          </md>
+          and
+          <md>
+            rs = \dfrac{a}{b}\cdot\dfrac{c}{d} = \dfrac{ac}{bd}.
+          </md>
+          Since the sum and difference of integers are integers, we know <m> ad\pm bc,bd,ac\in\Z </m>. Since <m> b,d\neq0 </m>, we also know <m> bd\neq0 </m>. 
+          Therefore, <m> r\pm s\in\Q </m> and <m> rs\in\Q </m>, and thus <m> \Q </m> is closed under addition, subtraction, and multiplication.
+        </li>
+        <li>
+          Exercise!
+        </li>
+        <li>
+          Exercise!
+        </li>
+      </ol>
+    </proof>
+
+  <subsection xml:id="subsect-irrational_numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title> 
+      Irrational Numbers
+    </title>
+
+    <p>
+      <xref ref="thm-properties_of_rationals" /> shows that basic algebraic combinations of rational numbers are rational. The set of irrational numbers, on the other hand, does not have such a nice structure. 
+      For example, the sum of two irrational numbers is not necessarily irrational. To see this, note <m> \sqrt{2} </m> and <m> -\sqrt{2} </m> are both irrational numbers but their sum 
+      <m> \sqrt{2}+(-\sqrt{2})=0 </m> is clearly rational. For this reason, showing a number to be irrational can be quite difficult! There are certain classes of numbers that can be shown to be irrational, 
+      which we now begin to investigate. To do so, we need to use the prime factorization of integers.
+    </p>
+
+  </subsection>
+
+  <theorem xml:id="thm-fundamental_theorem_of_arithmetic" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>
+      Fundamental Theorem of Arithmetic
+    </title>
+
+    <p>
+      Every integer <m> n \gt 1 </m> has a unique prime factorization (up to the order of the primes).
+    </p>
+  </theorem>
+
+  <p>
+    The proof of <xref ref="thm-fundamental_theorem_of_arithmetic" /> uses properties of prime numbers which we will not need in this course, so we omit the proof. It can be found in the early pages of any number theory textbook.
+  </p>
+
+  <p>
+    We now begin to look at how to show certain numbers are irrational. The next result provides a fundamental key.
+  </p>
+
+  <theorem xml:id="thm-square_root_n_irrational">
+    <p>
+      If <m> n\in\Z </m>, then <m> \sqrt{n} </m> is either an integer or irrational. 
+    </p>
+  </theorem>
+
+  <remark>
+    <p>
+      We will prove this using proof by contradiction. Recall that to do so we need to assume both the hypothesis (<m> n\in\Z^+</m>) and the negation of the conclusion (<m> \sqrt{n} </m> is not an integer and <m> \sqrt{n} </m> is rational).
+    </p>
+  </remark>
+
+  <proof>
+    <p>
+    Assume <m> n\in\Z^+ </m> with <m> \sqrt{n} </m> rational but not an integer. Note <m> n </m> must be greater than <m> 1 </m> since <m> \sqrt{1} = 1 \in\Z </m>. 
+    Since <m> \sqrt{n} </m> is rational, there must exist <m> a,b\in\Z </m>, <m> b\neq 0 </m>, with <m> \sqrt{n} = \dfrac{a}{b} </m>. 
+    We may assume <m> a,b \gt 0 </m> (since <m> \sqrt{n} \gt 0 </m>) and they have no common factors. Since <m> \sqrt{n}\notin\Z </m>, we know <m> b\neq 1 </m> and thus <m> b\gt 1 </m>. 
+    Squaring both sides of <m>\sqrt{n} = \dfrac{a}{b} </m> yields <m> n = \dfrac{a^2}{b^2} </m>, or <m> nb^2 = a^2 </m>. Note <m> a^2 = nb^2 \gt 1 \cdot 1 = 1 </m>. 
+    Since <m> nb^2,a^2 \gt 1 </m>, these both have prime factorizations. By assumption, <m> a </m> and <m> b </m> have no common factors, and so neither do <m> a^2 </m> and <m> b^2 </m>. 
+    This means <m> a^2 </m> and <m> nb^2 </m> have different prime factorizations, which contradicts the Fundamental Theorem of Arithmetic.
+    </p>
+  </proof>
+
+  <remark>
+    <p>
+      The statement of <xref ref="thm-square_root_n_irrational" /> holds with <m> \sqrt{n} </m> replaced by the more general <m> \sqrt[k]{n} </m> with <m> k\geq 2 </m>. 
+      The proof generalizes in the obvious way. See Exercise 10. (change this reference later!)
+    </p>
+  </remark>
+
+  <example xml:id="exam-irrational_square_roots">
+    <p>
+    By <xref ref="thm-square_root_n_irrational" />, the following numbers are all irrational:
+      <md>
+        \sqrt{2},\ \ \ \sqrt{3},\ \ \ \sqrt{5},\ \ \ \sqrt{23},\ \ \ \sqrt{40},\ \ \ \sqrt{67},\ \ \ \sqrt{273}
+      </md>
+    </p>
+  </example>
+
+
+
+
+
+
+
+
+  </subsection>
+
+</section>
