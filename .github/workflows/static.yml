@@ -32,9 +32,19 @@ jobs:
           python -m pip install pretext
 
       # Adjust this if your build command differs
-      - name: Build HTML
+      - name: Build Web
         run: |
-          pretext build html
+          pretext build web
+
+      - name: Build PDF
+        run: |
+          pretext build print
+
+      - name: Copy PDF into site folder
+        run: |
+          test -f output/print/main.pdf
+          mkdir -p output/web
+          cp output/print/main.pdf output/web/MA-309.pdf
 
       # Adjust OUTPUT_DIR to match your actual output folder
       - name: Add .nojekyll
