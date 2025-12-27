@@ -17,21 +17,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: oscarlevin/pretext-full
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install PreTeXt
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install pretext
-
-      # Adjust this if your build command differs
       - name: Build Web
         run: |
           pretext build web
@@ -43,15 +34,12 @@ jobs:
       - name: Copy PDF into site folder
         run: |
           test -f output/print/main.pdf
-          mkdir -p output/web
+          test -d output/web
           cp output/print/main.pdf output/web/MA-309.pdf
 
-      # Adjust OUTPUT_DIR to match your actual output folder
       - name: Add .nojekyll
         run: |
-          OUTPUT_DIR="output/web"
-          test -d "$OUTPUT_DIR"
-          touch "$OUTPUT_DIR/.nojekyll"
+          touch output/web/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
