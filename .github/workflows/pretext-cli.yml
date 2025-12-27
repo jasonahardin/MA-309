@@ -53,6 +53,13 @@ jobs:
             - name: stage deployment
               run: pretext deploy --stage-only
 
+            - name: build PDF  #added by chatgpt to add pdf to website
+              run: pretext build print
+
+            - name: copy PDF into staged site  #added by chatgpt to add pdf to website
+              run: |
+                cp output/print/main.pdf output/stage/MA-309.pdf
+
             - name: Bundle output/stage as artifact
               uses: actions/upload-artifact@v4
               with:
@@ -107,17 +114,7 @@ jobs:
                   path: deploy
             - name: Setup GitHub Pages
               id: check
-              uses: actions/configure-pages@v4
-            
-            - name: Build PDF #added by chatgpt to add pdf to website
-              run: |
-              pretext build print
-
-            - name: Copy PDF into deploy folder #added by chatgpt to add pdf to website
-              run: |
-              cp output/print/main.pdf deploy/MA-309.pdf
- 
-            
+              uses: actions/configure-pages@v4         
             
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
