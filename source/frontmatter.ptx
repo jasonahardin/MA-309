@@ -6,7 +6,7 @@
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
   <bibinfo>
   
-    <author>
+      <author>
       <personname>Dr. Jason A. Hardin</personname>
       <department>Mathematics Department</department>
       <institution>Worcester State University</institution>
@@ -27,6 +27,15 @@
     </copyright>
   
   </bibinfo>
+
+  <preface xml:id="download">
+    <title>Download PDF</title>
+
+    <p>
+      A downloadable PDF version of these notes is available here:
+      <url href="MA-309.pdf">Download the full PDF</url>.
+    </p>
+  </preface>
 
   <titlepage>
     <titlepage-items/>
