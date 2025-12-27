@@ -108,6 +108,17 @@ jobs:
             - name: Setup GitHub Pages
               id: check
               uses: actions/configure-pages@v4
+            
+            - name: Build PDF #added by chatgpt to add pdf to website
+              run: |
+              pretext build print
+
+            - name: Copy PDF into deploy folder #added by chatgpt to add pdf to website
+              run: |
+              cp output/print/main.pdf deploy/MA-309.pdf
+ 
+            
+            
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
