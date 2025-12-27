@@ -41,6 +41,11 @@ jobs:
         run: |
           touch output/web/.nojekyll
 
+      - name: List output/web contents
+        run: |
+          echo "=== output/web ==="
+          ls -lah output/web | sed -n '1,200p'
+      
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
