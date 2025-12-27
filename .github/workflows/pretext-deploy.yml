@@ -59,13 +59,6 @@ jobs:
       - name: build deploy targets
         run: pretext build --deploys
 
-      - name: build PDF  #added by chatgpt to publish pdf on website
-        run: pretext build print
-
-        - name: copy PDF into web output  #added by chatgpt to publish pdf on website
-        run: |
-          cp output/print/main.pdf output/web/MA-309.pdf
-
       - name: run deploy
         run: pretext deploy --no-push
 
