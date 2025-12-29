@@ -5,6 +5,7 @@
     Rational and Irrational Numbers
   </title>
 
+<introduction>
   <p>
     We begin be recalling the definitions and symbols for some basic number systems 
     which will be used continually throughout this course.
@@ -69,6 +70,8 @@
       </md>
     </p>
   </example>
+
+</introduction>
 
   <subsection xml:id="subsect-structure_Of_Q" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>
@@ -217,13 +220,213 @@
     </p>
   </example>
 
-
-
-
-
-
-
+  <theorem xml:id="thm-rational_irrational_combinations">
+    <statement>
+      <p>
+        Let <m> r </m> be a nonzero rational number and <m> s </m> be an irrational number. 
+        Then <m> r+s, r-s, rs, \text{ and } \dfrac{r}{s} </m> are irrational numbers.
+      </p>
+    </statement>
+  </theorem>
+  
+  <proof>
+    <p>
+      Assume <m> r </m> is a nonzero rational, <m> s </m> is irrational, and <m> r+s </m> is rational. Note <m> s=(r+s)-r </m>. 
+      Since <m> r+s </m> and <m> r </m> are both rational, <m> s </m> is the difference of two rational numbers, and is therefore rational by 
+      <xref ref="thm-properties_of_rationals" />(a). This contradicts the assumption that <m> s </m> is irrational.
+    </p>
+    <p>
+      The remaining parts of the theorem are proved in a similar way and left as exercises!
+    </p>
+  </proof>
+  
+  <example xml:id="exam-more_irrational_numbers">
+        <p>
+          Using <xref ref="thm-square_root_n_irrational" /> and <xref ref="thm-rational_irrational_combinations" />, the numbers
+            <md>
+              2+\sqrt{3},100-3\pi,\dfrac{\sqrt{3}}{2},\dfrac{-4}{3+\dfrac{4}{5}\sqrt{17}}
+            </md>
+          can all be shown to be irrational numbers.
+        </p>
+  </example>
+  
+  <p>
+    While <xref ref="thm-rational_irrational_combinations" /> can be used to show many numbers involving square roots are irrational, care must be taken when applying it. 
+    For example, intuition suggests that the number <m> \sqrt{3 + \sqrt{7} - \sqrt{8 - 2\sqrt{7}}} </m> should be irrational, especially in light of 
+    <xref ref="thm-square_root_n_irrational" /> and <xref ref="thm-rational_irrational_combinations" />. 
+    However, surprisingly it turns out that this number is actually rational! This is left as a fun exercise!
+  </p>
 
   </subsection>
+
+  <exercises xml:id="exercises-rational_irrational_numbers">
+    
+    <exercise>
+      <statement>
+        <p>
+          Verify the following numbers are rational by writing them as a quotient of two integers.
+        </p>
+          <ol>
+            <li>
+              <m> 3.14159 </m>
+            </li>
+            <li>
+              <m> \dfrac{1.23}{4.5678} </m>
+            </li>
+            <li>
+              <m> \log_5(\sqrt[7]{125}) </m>
+            </li>
+            <li>
+              <m> \sqrt[3]{\dfrac{125}{64}} </m>
+            </li>
+            <li>
+              <m> \dfrac{5\sec\left(\dfrac{5\pi}{4}\right)}{3\sqrt{2}} </m>
+            </li>
+            <li>
+              <m> 1+2+3+\cdots+100 </m>
+            </li>
+          </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+        <statement>
+          <p>
+            Show that the number 
+              <md>
+                r = \sqrt{3 + \sqrt{7} - \sqrt{8 - 2\sqrt{7}}}
+              </md>
+            is a rational number by writing it as a quotient of integers.            
+          </p>
+        </statement>
+        <hint>
+          <p>
+            There are several approaches to this; one of them uses the observation that <m> 8 = \left(\srt{7}\right)^2 + 1^2 </m>.
+          </p>
+        </hint>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Use results from this section to explain why the following numbers are irrational.
+        </p>
+        <ol>
+          <li>
+            <m> \sqrt{10001} </m>
+          </li>
+          <li>
+            <m> \dfrac{\sqrt{2}}{2} </m>
+          </li>
+          <li>
+            <m> \dfrac{1}{2} + 3 + 4\sqrt{5} </m>
+          </li>
+          <li>
+            <m> \dfrac{100.987}{5-\sqrt[4]{12}} </m>
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          A high school teacher named Ms. Take tries to use <xref ref="thm-square_root_n_irrational" /> to convince her students that 
+          <m> \sqrt{27206656} </m> must be irrational. Is she correct?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Use the Fundamental Theorem of Arithmetic to prove <m> \log(21) </m> is irrational.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          <xref ref="thm-properties_of_rationals" /> demonstrates the rational numbers (nonzero for division) are closed under the four basic operations. 
+          The irrational numbers, unfortunately, do not have such nice closure properties.
+        </p>
+        <ol>
+          <li>
+            Provide an example of two <alert> different irrational numbers </alert> whose sum is rational. Be sure to justify why your chosen numbers are irrational.
+          </li>
+          <li>
+            Provide an example of two <alert> different irrational numbers </alert> whose difference is rational. Be sure to justify why your chosen numbers are irrational.
+          </li>
+          <li>
+            Provide an example of two <alert> different irrational numbers </alert> whose product is rational. Be sure to justify why your chosen numbers are irrational.
+          </li>
+          <li>
+            Provide an example of two <alert> different irrational numbers </alert> whose quotient is rational. Be sure to justify why your chosen numbers are irrational.
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Determine whether the set of rational numbers is closed under exponentiation; that is, if <m> r,s\in\Q </m>, determine whether <m> r^s </m> must always be in 
+          <m> \Q </m>. Either provide a proof of this fact or provide a specific counterexample to show it is false.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+           Prove <xref ref="thm-properties_of_rationals" />(b):  The set <m> \Q-\{0\} </m> is closed under division.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove <xref ref="thm-properties_of_rationals" />(c).
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove the following generalization of Theorem <xref ref="thm-square_root_n_irrational" />: 
+          If <m> n\in\Z^+ </m> and <m> k\in\Z^+ </m> with <m> k\geq 2 </m>, then <m> \sqrt[k]{n} </m> is either an integer or irrational.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+           Complete the proof of <xref ref="thm-rational_irrational_combinations" />:  
+           Let <m> r </m> be a nonzero rational number and <m> s </m> an irrational number. Then <m> r-s</m>, <m> rs </m>, and <m> \dfrac{r}{s} </m> are irrational numbers.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m> a,b,c\in\Z </m> with <m> a\neq0 </m> and consider the number <m> x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} </m>. Prove the following:
+        </p>
+        <ol>
+          <li>
+            If <m> \sqrt{b^2 - 4ac}\in\Z </m>, then <m> x </m> is rational.
+          </li>
+          <li>
+            If <m> \sqrt{b^2 - 4ac}\not\in\Z </m>, then <m> x </m> is irrational.
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
+  </exercises>
 
 </section>
