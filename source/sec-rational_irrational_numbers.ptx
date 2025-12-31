@@ -13,17 +13,17 @@
 
   <p>
     The set of <term>natural</term> (or <term>counting</term>) <term>numbers</term>, denoted by <m>\N</m>, are defined as follows:
-      <md>
+      <me>
         \N = \{1,2,3,4,\ldots\}.
-      </md>
+      </me>
     Note that <m>0</m> is not considered a natural number.
   </p>
 
   <p>
     The <term>integers</term>, denoted <m>\Z</m>, consist of all natural numbers,  their negatives, and zero:
-      <md>
+      <me>
         \Z = \{ \ldots,-4,-3,-2,-1,0,1,2,3,4,\ldots\}.
-      </md>
+      </me>
   </p>
 
   <p>
@@ -47,13 +47,13 @@
   <example xml:id="exam-rational_numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
     <p>
     The following numbers are all rational since they can all be written as quotients of two integers as in <xref ref="defn-rational_irrational_numbers" />:
-      <md>
+      <me>
         \dfrac{5}{6},\ \ \ -9 = \dfrac{-9}{1},\ \ \ 4.9512 = \dfrac{49512}{10000},\ \ \ 
         \ln(e^{12/5}) = \dfrac{12}{5},\ \ \ 
-      </md>
-      <md>
+      </me>
+      <me>
         \sqrt{12}\tan\left(\dfrac{\pi}{3}\right) = \sqrt{12}\cdot\sqrt{3}=6=\dfrac{6}{1}
-      </md>
+      </me>
     </p>
   </example>
 
@@ -65,9 +65,9 @@
     <p>
       The following numbers are all known to be irrational. No effort is made to prove this  here; however, the irrationality of the three square roots will be proven later 
       (see <xref ref="thm-square_root_n_irrational" />) while that of the others will simply be accepted as fact for purposes of these notes.
-      <md>
+      <me>
         \sqrt{2},\ \ \ \sqrt{83},\ \ \ \sqrt{205},\ \ \ e,\ \ \ \pi,\ \ \ \ln(3),\ \ \ \sin(3)
-      </md>
+      </me>
     </p>
   </example>
 
@@ -130,13 +130,13 @@
         <li>
           Let <m> r,s\in\Q </m>. By the definition of a rational number, there exist <m> a,b,c,d\in\Z </m>, with <m> r=\dfrac{a}{b} </m>, <m> s=\dfrac{c}{d} </m>, and 
           <m> b,d\neq0 </m>. Then
-          <md>
+          <me>
             r \pm s = \dfrac{a}{b} \pm \dfrac{c}{d} = \dfrac{ad\pm bc}{bd}
-          </md>
+          </me>
           and
-          <md>
+          <me>
             rs = \dfrac{a}{b}\cdot\dfrac{c}{d} = \dfrac{ac}{bd}.
-          </md>
+          </me>
           Since the sum and difference of integers are integers, we know <m> ad\pm bc,bd,ac\in\Z </m>. Since <m> b,d\neq0 </m>, we also know <m> bd\neq0 </m>. 
           Therefore, <m> r\pm s\in\Q </m> and <m> rs\in\Q </m>, and thus <m> \Q </m> is closed under addition, subtraction, and multiplication.
         </li>
@@ -214,9 +214,9 @@
   <example xml:id="exam-irrational_square_roots">
     <p>
     By <xref ref="thm-square_root_n_irrational" />, the following numbers are all irrational:
-      <md>
+      <me>
         \sqrt{2},\ \ \ \sqrt{3},\ \ \ \sqrt{5},\ \ \ \sqrt{23},\ \ \ \sqrt{40},\ \ \ \sqrt{67},\ \ \ \sqrt{273}
-      </md>
+      </me>
     </p>
   </example>
 
@@ -243,9 +243,9 @@
   <example xml:id="exam-more_irrational_numbers">
         <p>
           Using <xref ref="thm-square_root_n_irrational" /> and <xref ref="thm-rational_irrational_combinations" />, the numbers
-            <md>
+            <me>
               2+\sqrt{3},100-3\pi,\dfrac{\sqrt{3}}{2},\dfrac{-4}{3+\dfrac{4}{5}\sqrt{17}}
-            </md>
+            </me>
           can all be shown to be irrational numbers.
         </p>
   </example>
@@ -293,9 +293,9 @@
         <statement>
           <p>
             Show that the number 
-              <md>
+              <me>
                 r = \sqrt{3 + \sqrt{7} - \sqrt{8 - 2\sqrt{7}}}
-              </md>
+              </me>
             is a rational number by writing it as a quotient of integers.            
           </p>
         </statement>
@@ -353,16 +353,16 @@
         </p>
         <ol>
           <li>
-            Provide an example of two <alert> different irrational numbers </alert> whose sum is rational. Be sure to justify why your chosen numbers are irrational.
+            Provide an example of two different irrational numbers whose sum is rational. Be sure to justify why your chosen numbers are irrational.
           </li>
           <li>
-            Provide an example of two <alert> different irrational numbers </alert> whose difference is rational. Be sure to justify why your chosen numbers are irrational.
+            Provide an example of two different irrational numbers whose difference is rational. Be sure to justify why your chosen numbers are irrational.
           </li>
           <li>
-            Provide an example of two <alert> different irrational numbers </alert> whose product is rational. Be sure to justify why your chosen numbers are irrational.
+            Provide an example of two different irrational numbers whose product is rational. Be sure to justify why your chosen numbers are irrational.
           </li>
           <li>
-            Provide an example of two <alert> different irrational numbers </alert> whose quotient is rational. Be sure to justify why your chosen numbers are irrational.
+            Provide an example of two different irrational numbers whose quotient is rational. Be sure to justify why your chosen numbers are irrational.
           </li>
         </ol>
       </statement>
