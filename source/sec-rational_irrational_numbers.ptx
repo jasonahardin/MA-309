@@ -164,9 +164,9 @@
   </subsection>
 
   <theorem xml:id="thm-fundamental_theorem_of_arithmetic" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>
+    <creator>
       Fundamental Theorem of Arithmetic
-    </title>
+    </creator>
 
     <p>
       Every integer <m> n \gt 1 </m> has a unique prime factorization (up to the order of the primes).
@@ -301,7 +301,7 @@
         </statement>
         <hint>
           <p>
-            There are several approaches to this; one of them uses the observation that <m> 8 = \left(\srt{7}\right)^2 + 1^2 </m>.
+            There are several approaches to this; one of them uses the observation that <m> 8 = \left(\sqrt{7}\right)^2 + 1^2 </m>.
           </p>
         </hint>
     </exercise>
