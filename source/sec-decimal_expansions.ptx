@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-decimal_expansions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>
+    Decimal Expansions
+  </title>
+
+<introduction>
+
+    <p>
+        We have defined the natural numbers, integers, rational numbers, and irrational numbers, but up to this point we have made no effort to define the real numbers. 
+        There are many approaches to define the real numbers, but we will take a somewhat simplistic (but still useful!) view involving decimal expansions. 
+    </p>
+
+    <definition xml:id="def-real_number">
+        <notation>
+            <usage> <m> \R </m> </usage>
+          <description> real numbers </description>
+        </notation>
+        <statement>
+            <p>
+                A <term> real number </term> is a number which has a decimal expansion. The set of all real numbers is denoted <m> \R </m>.
+            </p>
+        </statement>
+    </definition>
+
+    <p>
+        There are two types of decimal expansions for real numbers, which can be informally described as follows:
+    </p>
+
+    <ul>
+        <li>
+            Finite/terminating decimals such as <m> 6.125 </m>, <m> 5.1 </m>, and <m> 0.0000123456789 </m>.
+        </li>
+        <li>
+            Infinite/non-terminating decimals such as <m> 4.333\ldots = 4.\overline{3} </m> and <m> 0.127666\ldots=0.127\overline{6} </m>.
+        </li>
+    </ul>
+
+    <p>
+        In order to formally define and analyze these types of decimal expansions, we will utilize the following notation:
+    </p>
+    <me>
+        D.d_1d_2d_3d_4\cdots
+    </me>
+    <p>
+        where <m> D </m> is a non-negative integer and <m> d_1,d_2,d_3,d_4,\ldots </m> are digits (<m> 0,1,\ldots,9 </m>). 
+        For example, the number <m> 6.125 </m> is represented with <m> D=6 </m>, <m> d_1=1 </m>, <m> d_2=2 </m>, <m> d_3=5 </m>, 
+        and <m> d_n=0 </m> for all <m> n \geq 4 </m>; the number <m> 0.166666\ldots=0.1\overline{6} </m> is represented by <m> D=0 </m>, <m> d_1=1 </m>, 
+        and <m> d_n=6 </m> for <m> n\geq 2 </m>.
+    </p>
+
+</introduction>
+
+<subsection xml:id="subsec-finite_infinite_decimals"  xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>
+        Finate and Infinite Decimals
+    </title>
+    
+    <p>
+        The notions of finite and infinite decimals are easily understood, but for purposes of discussion we need to have definitions for each.
+    </p>
+
+    <definition xml:id="def-finite_decimal">
+        <statement>
+            <p>
+                A <term> finite decimal </term> <m> x=D.d_1d_2\cdots d_t </m> is defined as the number
+                    <me>
+                        x = D + \dfrac{d_1}{10} + \dfrac{d_2}{10^2} + \cdots + \dfrac{d_t}{10^t}
+                    </me>.
+            </p>
+        </statement>
+    </definition>
+
+    <p>
+        Note that finite decimals are finite sums of rational numbers, and therefore all finite decimals must be rational by <xref ref="thm-properties_of_rationals" />(a).
+    </p>
+
+    <example>
+        <p>
+            We can use <xref ref="def-finite_decimal" /> to write the number <m> 6.125 </m> as a fraction.
+        </p>
+        <md>
+            <mrow> 6.125 \amp= 6 + \dfrac{1}{10} + \dfrac{2}{10^2} + \dfrac{5}{10^3} </mrow>
+            <mrow> \amp= 6 + \dfrac{1}{10} + \dfrac{2}{100} + \dfrac{5}{1000} </mrow>
+            <mrow> \amp= 6 + \dfrac{100}{1000} + \dfrac{20}{1000} + \dfrac{5}{1000} </mrow>
+            <mrow> \amp= 6 + \dfrac{125}{1000} </mrow>
+            <mrow> \amp= 6 + \dfrac{1}{8} </mrow>
+            <mrow> \amp= \dfrac{49}{8} </mrow>
+        </md>
+    </example>
+
+    <definition xml:id="def-infinite_decimal" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <statement>
+            <p>
+                An <term> infinite decimal </term> <m> x = D.d_1d_2d_3\ldots d_n\ldots </m> is defined as either
+            </p>
+            <ol>
+                <li>
+                    the limit of the sequence of finite decimals <m> D </m>, <m> D.d_1 </m>, <m> D.d_1d_2 </m>, <m> D.d_1d_2d_3 </m>, <m> \ldots </m>
+                </li>
+                <li>
+                    the sum of the series <m> D + \displaystyle\sum_{i=0}^{\infty} \dfrac{d_i}{10^i} </m>.
+                </li>
+            </ol>
+        </statement>
+    </definition>
+
+    <remark>
+        <p>
+            The equivalence of the two definitions of infinite decimals should be clear from the definition of series convergence in calculus.
+            Recall that a geometric series is a series of the form
+        </p>
+        <me> 
+            \displaystyle\sum_{i=0}^{\infty} a\cdot r^{n-1} = a + ar + ar^2 + ar^3 + \cdots
+        </me>.
+        <p>
+            A geometric series converges when <m> |r| \lt 1 </m>, and in this case the sum of the series is <m> \dfrac{a}{1-r} </m>.
+        </p>
+    </remark>
+
+
+</subsection>
+
+
+
+</section>

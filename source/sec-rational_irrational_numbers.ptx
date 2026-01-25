@@ -12,6 +12,11 @@
   </p>
 
   <p>
+    <notation>
+      <usage> <m> \N </m> </usage>
+      <description> natural numbers </description>
+    </notation>
+
     The set of <term>natural</term> (or <term>counting</term>) <term>numbers</term>, denoted by <m>\N</m>, are defined as follows:
       <me>
         \N = \{1,2,3,4,\ldots\}.
@@ -20,6 +25,11 @@
   </p>
 
   <p>
+    <notation>
+      <usage> <m> \Z </m> </usage>
+      <description> integers </description>
+    </notation>
+    
     The <term>integers</term>, denoted <m>\Z</m>, consist of all natural numbers,  their negatives, and zero:
       <me>
         \Z = \{ \ldots,-4,-3,-2,-1,0,1,2,3,4,\ldots\}.

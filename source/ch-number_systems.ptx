@@ -14,5 +14,6 @@
 
   <!-- include sections -->
   <xi:include href="sec-rational_irrational_numbers.ptx" />
+  <xi:include href="sec-decimal_expansions.ptx" />
 
 </chapter>
